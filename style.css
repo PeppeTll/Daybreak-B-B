@@ -1,0 +1,951 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+  text-transform: capitalize;
+  font-family: 'Playfair Display', serif;
+  scroll-behavior: smooth;
+  border: 0;
+}
+
+:root {
+  --white: #ffffffff;
+  --chamoisee: #a38560ff;
+  --satin-sheen-gold: #c6a15bff;
+  --lapis-lazuli: #38618cff;
+  --argentinian-blue: #35a7ffff;
+  --width: 1140px;
+  --width-mobile: 760px;
+  --font-standard: 'Playfair Display', serif;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    width: 100%;
+    background-color: var(--argentinian-blue);
+  }
+
+  .body_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    width: 100%;
+    height: 85px;
+    margin: 0 auto;
+    color: var(--white);
+    overflow: hidden;
+  }
+
+  .ul_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    display: none;
+  }
+
+  a {
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .logo {
+    padding: 10px;
+    width: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .slider {
+    width: 100dvw;
+    margin: 0 auto;
+    height: 100dvh;
+    position: relative;
+  }
+
+  .img_slider {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .section_icon {
+    width: 100dvw;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left_line {
+    width: 35%;
+    border: 1px solid var(--argentinian-blue);
+  }
+
+  .central_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5rem;
+    color: var(--lapis-lazuli);
+    padding: 10px;
+    border-radius: 50px;
+    border-left: 1px solid var(--lapis-lazuli);
+    border-right: 1px solid var(--lapis-lazuli);
+  }
+
+  #chi_siamo {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .right_line {
+    width: 35%;
+    border: 1px solid var(--argentinian-blue);
+  }
+
+  .chi_siamo {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .image_wrapper {
+    width: 100%;
+    height: 500px;
+    position: relative;
+  }
+
+  .image_1 {
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 264px;
+    height: 410px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+  }
+
+  .image_2 {
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    object-fit: cover;
+    object-position: center;
+    top: 44%;
+    right: 8%;
+    padding: 10px;
+    background-color: var(--chamoisee);
+  }
+
+  .image_wrapper::after {
+    content: '';
+    position: absolute;
+    top: 120px;
+    left: 5%;
+    z-index: -1;
+    width: 90%;
+    height: 250px;
+    background-color: var(--lapis-lazuli);
+    border-radius: 15px;
+  }
+
+  .info_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .h1_chi_siamo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    color: var(--lapis-lazuli);
+  }
+
+  .h3_chi_siamo {
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 48px;
+    color: var(--chamoisee);
+    position: absolute;
+    top: 18%;
+    right: 28px;
+  }
+
+  .p_chi_siamo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  #card_service {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    overflow: auto;
+    gap: 20px;
+  }
+
+  .card {
+    width: 220px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 30px;
+    border-top: 2px solid var(--argentinian-blue);
+    border-bottom: 2px solid var(--argentinian-blue);
+  }
+
+  .icon_card {
+    width: 220px;
+    font-size: 60px;
+    color: var(--chamoisee);
+  }
+
+  .title_card {
+    width: 220px;
+    font-family: 'Mr Dafoe', cursive;
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: var(--lapis-lazuli);
+  }
+
+  .card_description {
+    width: 220px;
+  }
+
+  .dove_siamo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    gap: 20px;
+  }
+
+  .map {
+    width: 90dvw;
+    border-radius: 30px;
+    padding: 15px;
+    border-top: 2px solid var(--chamoisee);
+    border-bottom: 2px solid var(--chamoisee);
+  }
+
+  #info_location {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    gap: 25px;
+  }
+
+  .location_card {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .icon_location {
+    font-size: 50px;
+    color: var(--chamoisee);
+  }
+
+  .info_wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title_location {
+    font-size: 1.8rem;
+    font-family: 'Mr Dafoe', cursive;
+    font-weight: 100;
+    color: var(--lapis-lazuli);
+  }
+
+  .description_location {
+    font-size: 1rem;
+    font-family: var(--font-standard);
+  }
+
+  form {
+    width: 80dvw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-left: 1px solid var(--argentinian-blue);
+    border-right: 1px solid var(--argentinian-blue);
+    border-radius: 30px;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+
+  input {
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 15px;
+    border-left: 1px solid var(--chamoisee);
+    border-right: 1px solid var(--chamoisee);
+    color: var(--lapis-lazuli) !important;
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
+
+  label {
+    font-size: 1.8rem;
+    color: var(--lapis-lazuli);
+  }
+}
+
+@media screen and (min-width:769px) and (max-width:1023px) {
+  body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    width: 100%;
+    background-color: var(--argentinian-blue);
+  }
+
+  .body_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    width: 100%;
+    height: 85px;
+    margin: 0 auto;
+    color: var(--white);
+    overflow: hidden;
+  }
+
+  .ul_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    display: none;
+  }
+
+  a {
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .logo {
+    padding: 10px;
+    width: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .slider {
+    width: 100dvw;
+    margin: 0 auto;
+    height: 100dvh;
+    position: relative;
+  }
+
+  .img_slider {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .section_icon {
+    width: 100dvw;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left_line {
+    width: 35%;
+    border: 1px solid var(--argentinian-blue);
+  }
+
+  .central_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5rem;
+    color: var(--lapis-lazuli);
+    padding: 10px;
+    border-radius: 50px;
+    border-left: 1px solid var(--lapis-lazuli);
+    border-right: 1px solid var(--lapis-lazuli);
+  }
+
+  #chi_siamo {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .right_line {
+    width: 35%;
+    border: 1px solid var(--argentinian-blue);
+  }
+
+  .chi_siamo {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .image_wrapper {
+    width: 100%;
+    height: 600px;
+    position: relative;
+  }
+
+  .image_1 {
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    width: 364px;
+    height: 510px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+  }
+
+  .image_2 {
+    position: absolute;
+    width: 275px;
+    height: 275px;
+    object-fit: cover;
+    object-position: center;
+    top: 50%;
+    right: 20%;
+    padding: 10px;
+    background-color: var(--chamoisee);
+  }
+
+  .image_wrapper::after {
+    content: '';
+    position: absolute;
+    top: 80px;
+    left: 15%;
+    z-index: -1;
+    width: 70%;
+    height: 350px;
+    background-color: var(--lapis-lazuli);
+    border-radius: 15px;
+  }
+
+  .info_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .h1_chi_siamo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    color: var(--lapis-lazuli);
+  }
+
+  .h3_chi_siamo {
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 48px;
+    color: var(--chamoisee);
+    position: absolute;
+    top: 10%;
+    right: 28px;
+  }
+
+  .p_chi_siamo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  #card_service {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    overflow: auto;
+    gap: 20px;
+  }
+
+  .card {
+    width: 220px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 30px;
+    border-top: 2px solid var(--argentinian-blue);
+    border-bottom: 2px solid var(--argentinian-blue);
+  }
+
+  .icon_card {
+    width: 220px;
+    font-size: 60px;
+    color: var(--chamoisee);
+  }
+
+  .title_card {
+    width: 220px;
+    font-family: 'Mr Dafoe', cursive;
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: var(--lapis-lazuli);
+  }
+
+  .card_description {
+    width: 220px;
+  }
+
+  .dove_siamo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    gap: 20px;
+  }
+
+  .map {
+    width: 800px;
+    border-radius: 30px;
+    padding: 15px;
+    border-top: 2px solid var(--chamoisee);
+    border-bottom: 2px solid var(--chamoisee);
+  }
+
+  #info_location {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    gap: 25px;
+  }
+
+  .location_card {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .icon_location {
+    font-size: 50px;
+    color: var(--chamoisee);
+  }
+
+  .info_wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title_location {
+    font-size: 1.8rem;
+    font-family: 'Mr Dafoe', cursive;
+    font-weight: 100;
+    color: var(--lapis-lazuli);
+  }
+
+  .description_location {
+    font-size: 1rem;
+    font-family: var(--font-standard);
+  }
+
+  form {
+    width: 80dvw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-left: 1px solid var(--argentinian-blue);
+    border-right: 1px solid var(--argentinian-blue);
+    border-radius: 30px;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+
+  input {
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 15px;
+    border-left: 1px solid var(--chamoisee);
+    border-right: 1px solid var(--chamoisee);
+    color: var(--lapis-lazuli) !important;
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
+
+  label {
+    font-size: 1.8rem;
+    color: var(--lapis-lazuli);
+  }
+}
+
+@media screen and (min-width:1024px) {
+  body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    width: 100%;
+    background-color: var(--argentinian-blue);
+  }
+
+  .body_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    width: var(--width);
+    height: 85px;
+    margin: 0 auto;
+    color: var(--white);
+    overflow: hidden;
+  }
+
+  .ul_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  a {
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .logo {
+    padding: 10px;
+    width: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .slider {
+    width: 100vw;
+    margin: 0 auto;
+    height: 700px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /* overflow: hidden; */
+    position: relative;
+  }
+
+  .img_slider {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .section_icon {
+    width: var(--width);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .left_line {
+    width: 40%;
+    border: 1px solid var(--argentinian-blue);
+  }
+
+  .central_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5rem;
+    color: var(--lapis-lazuli);
+    padding: 10px;
+    border-radius: 50px;
+    border-left: 1px solid var(--lapis-lazuli);
+    border-right: 1px solid var(--lapis-lazuli);
+  }
+
+  #chi_siamo {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .right_line {
+    width: 40%;
+    border: 1px solid var(--argentinian-blue);
+  }
+
+  .chi_siamo {
+    margin: 0 auto;
+    max-width: var(--width);
+    height: 652px;
+    display: flex;
+  }
+
+  .image_wrapper {
+    width: 50%;
+    position: relative;
+  }
+
+  .image_1 {
+    position: absolute;
+    top: 5%;
+    left: 38%;
+    transform: translate(-38%);
+    width: 364px;
+    height: 510px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+  }
+
+  .image_2 {
+    position: absolute;
+    width: 275px;
+    height: 275px;
+    object-fit: cover;
+    object-position: center;
+    top: 50%;
+    right: 15%;
+    padding: 10px;
+    background-color: var(--chamoisee);
+  }
+
+  .image_wrapper::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    transform: translate(0, -50%);
+    width: 90%;
+    height: 350px;
+    background-color: var(--lapis-lazuli);
+    border-radius: 15px;
+  }
+
+  .info_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 50%;
+    padding: 0 40px;
+  }
+
+  .h1_chi_siamo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    color: var(--lapis-lazuli);
+  }
+
+  .h3_chi_siamo {
+    font-family: 'Mr Dafoe', cursive;
+    font-size: 48px;
+    color: var(--chamoisee);
+    position: absolute;
+    top: 28%;
+    right: 20px;
+  }
+
+  .p_chi_siamo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  #card_service {
+    width: var(--width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  .card {
+    width: 220px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    border-radius: 30px;
+    border-top: 2px solid var(--argentinian-blue);
+    border-bottom: 2px solid var(--argentinian-blue);
+  }
+
+  .icon_card {
+    font-size: 60px;
+    color: var(--chamoisee);
+  }
+
+  .title_card {
+    font-family: 'Mr Dafoe', cursive;
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: var(--lapis-lazuli);
+  }
+
+  .dove_siamo {
+    width: var(--width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+  }
+
+  .map {
+    width: 45%;
+    border-radius: 30px;
+    padding: 15px;
+    border-top: 2px solid var(--chamoisee);
+    border-bottom: 2px solid var(--chamoisee);
+  }
+
+  #info_location {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    gap: 25px;
+  }
+
+  .location_card {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .icon_location {
+    font-size: 50px;
+    color: var(--chamoisee);
+  }
+
+  .info_wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title_location {
+    font-size: 1.8rem;
+    font-family: 'Mr Dafoe', cursive;
+    font-weight: 100;
+    color: var(--lapis-lazuli);
+  }
+
+  .description_location {
+    font-size: 1rem;
+    font-family: var(--font-standard);
+  }
+
+  form {
+    width: 500px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-left: 1px solid var(--argentinian-blue);
+    border-right: 1px solid var(--argentinian-blue);
+    border-radius: 30px;
+  }
+
+  input {
+    width: 200px;
+    padding: 10px;
+    border-radius: 15px;
+    border-left: 1px solid var(--chamoisee);
+    border-right: 1px solid var(--chamoisee);
+    color: var(--lapis-lazuli) !important;
+    font-weight: 800;
+  }
+
+
+}
