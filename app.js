@@ -46,8 +46,14 @@ const createLocationsCard = () => {
 const sliderwrapper = qS('#slider_root');
 const serviceCard = qS('#card_service');
 const infoLocation = qS('#info_location');
+const nav = qS('.ul_navbar');
+const burgher = qS('.burgher');
 let count = 0;
 
 createSlider();
 createServiceCard();
 createLocationsCard();
+
+burgher.addEventListener('click', () => {
+  nav.classList.toggle('active');
+});

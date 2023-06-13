@@ -18,7 +18,6 @@
   --lapis-lazuli: #38618cff;
   --argentinian-blue: #35a7ffff;
   --width: 1140px;
-  --width-mobile: 760px;
   --font-standard: 'Playfair Display', serif;
 }
 
@@ -37,22 +36,39 @@
 
   .body_header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 25px;
+    padding: 10px;
     width: 100%;
     height: 85px;
-    margin: 0 auto;
     color: var(--white);
-    overflow: hidden;
+  }
+
+  .burgher {
+    font-size: 1.8rem;
   }
 
   .ul_navbar {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    display: none;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.35s ease-in-out;
+    left: -100px;
+  }
+
+  .active {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    z-index: 3;
+    backdrop-filter: blur(15px);
+    padding-top: 30px;
+    opacity: 1;
   }
 
   a {
@@ -70,7 +86,7 @@
   .slider {
     width: 100dvw;
     margin: 0 auto;
-    height: 100dvh;
+    height: 90dvh;
     position: relative;
   }
 
@@ -365,26 +381,43 @@
 
   .body_header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 25px;
     width: 100%;
     height: 85px;
-    margin: 0 auto;
     color: var(--white);
-    overflow: hidden;
+  }
+
+  .burgher {
+    font-size: 1.8rem;
   }
 
   .ul_navbar {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    display: none;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.35s ease-in-out;
+    left: -100px;
+  }
+
+  .active {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    z-index: 3;
+    backdrop-filter: blur(15px);
+    padding-top: 30px;
+    opacity: 1;
   }
 
   a {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: 'Dancing Script', cursive;
   }
 
@@ -679,6 +712,10 @@
     background-color: var(--argentinian-blue);
   }
 
+  .burgher {
+    display: none;
+  }
+
   .body_header {
     display: flex;
     justify-content: space-between;
@@ -937,7 +974,7 @@
   }
 
   form {
-    width: 500px;
+    width: 600px;
     height: 700px;
     display: flex;
     flex-direction: column;
@@ -947,18 +984,21 @@
     border-left: 1px solid var(--argentinian-blue);
     border-right: 1px solid var(--argentinian-blue);
     border-radius: 30px;
+    margin-bottom: 30px;
   }
 
 
 
   input {
-    width: 200px;
+    width: 300px;
+    height: 80px;
     padding: 10px;
     border-radius: 15px;
     border-left: 1px solid var(--chamoisee);
     border-right: 1px solid var(--chamoisee);
     color: var(--lapis-lazuli) !important;
     font-weight: 800;
+    background-color: inherit;
   }
 
 
