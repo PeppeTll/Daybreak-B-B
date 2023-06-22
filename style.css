@@ -212,6 +212,7 @@
   .p_chi_siamo {
     font-family: 'Dancing Script', cursive;
     font-size: 25px;
+    font-weight: 600;
     margin-top: 60px;
     text-align: center;
   }
@@ -258,6 +259,7 @@
 
   .card_description {
     width: 220px;
+    font-weight: 600;
   }
 
   .dove_siamo {
@@ -319,6 +321,7 @@
 
   .description_location {
     font-size: 1rem;
+    font-weight: 600;
     font-family: var(--font-standard);
   }
 
@@ -557,6 +560,7 @@
   .p_chi_siamo {
     font-family: 'Dancing Script', cursive;
     font-size: 25px;
+    font-weight: 600;
     margin-top: 60px;
     text-align: center;
   }
@@ -603,6 +607,7 @@
 
   .card_description {
     width: 220px;
+    font-weight: 600;
   }
 
   .dove_siamo {
@@ -663,6 +668,7 @@
 
   .description_location {
     font-size: 1rem;
+    font-weight: 600;
     font-family: var(--font-standard);
   }
 
@@ -876,6 +882,7 @@
   .p_chi_siamo {
     font-family: 'Dancing Script', cursive;
     font-size: 25px;
+    font-weight: 600;
     margin-top: 60px;
     text-align: center;
   }
@@ -912,6 +919,10 @@
     font-weight: 100;
     font-size: 1.5rem;
     color: var(--lapis-lazuli);
+  }
+
+  .card_description {
+    font-weight: 600;
   }
 
   .dove_siamo {
@@ -970,6 +981,7 @@
 
   .description_location {
     font-size: 1rem;
+    font-weight: 600;
     font-family: var(--font-standard);
   }
 

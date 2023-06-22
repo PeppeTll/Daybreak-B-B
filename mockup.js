@@ -66,6 +66,12 @@ export const locationList = [
     description: '10 minuti a piedi al palazzo reale'
   },
   {
+    id: 3,
+    icon: 'fa-solid fa-archway',
+    location: '4 canti',
+    description: '10 minuti a piedi ai 4 canti di palermo'
+  },
+  {
     id: 4,
     icon: 'fa-solid fa-church',
     location: 'cattedrale di palermo',
