@@ -38,7 +38,7 @@ const createLocationsCard = () => {
     const icon = createEl('i', `icon_location ${location.icon}`, null, card);
     const infoWrap = createEl('div', 'info_wrap', null, card);
     const title = createEl('h2', 'title_location', location.location, infoWrap);
-    const description = createEl('div', 'description_location', location.description, infoWrap);
+    const description = createEl('p', 'description_location', location.description, infoWrap);
   })
 };
 
