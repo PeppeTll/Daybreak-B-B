@@ -211,11 +211,9 @@ a {
   }
 
   .h3_chi_siamo {
-    font-size: 48px;
+    font-size: 35px;
     color: var(--chamoisee);
-    position: absolute;
-    top: 18%;
-    right: 28px;
+    /* position: absolute; */
   }
 
   .p_chi_siamo {
