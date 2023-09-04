@@ -1000,5 +1000,23 @@ a {
     background-color: inherit;
   }
 
+  footer {
+    background-color: var(--lapis-lazuli);
+    width: 100%;
+    padding: 10px;
+    color: var(--white);
+  }
+
+  .footer__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .footer__container__logo {
+    width: 250px;
+  }
+
 
 }
