@@ -374,6 +374,25 @@ a {
     font-size: 1.8rem;
     color: var(--lapis-lazuli);
   }
+
+  footer {
+    background-color: var(--lapis-lazuli);
+    width: 100%;
+    padding: 10px;
+    color: var(--white);
+  }
+
+  .footer__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .footer__container__logo {
+    width: 150px;
+  }
+
 }
 
 @media screen and (min-width:769px) and (max-width:1023px) {
@@ -698,6 +717,25 @@ a {
     font-size: 1.8rem;
     color: var(--lapis-lazuli);
   }
+
+  footer {
+    background-color: var(--lapis-lazuli);
+    width: 100%;
+    padding: 10px;
+    color: var(--white);
+  }
+
+  .footer__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .footer__container__logo {
+    width: 250px;
+  }
+
 }
 
 @media screen and (min-width:1024px) {
