@@ -1,15 +1,19 @@
 export const imageList = [
   {
     id: 1,
-    path: 'https://www.bedandbreakfastroma.com/upload/inkam3/20170508/234-2016-SITO-1.jpg'
+    path: "./assets/Immagine WhatsApp 2023-08-17 ore 20.27.21.jpg"
   },
   {
     id: 2,
-    path: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/380853877.jpg?k=b89b83d9c078d7990eeaee795e08f98838eb2b1dbcc6c90a2c009dadc3a5a9aa&o=&hp=1'
+    path: "./assets/Immagine WhatsApp 2023-08-17 ore 20.27.22.jpg"
   },
   {
     id: 3,
-    path: 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/302748735.jpg?k=a0a7ee89868ab89e62829233f767ef8140bd82820efec02b7c7ae531d7562c62&o=&hp=1'
+    path: "./assets/Immagine WhatsApp 2023-08-17 ore 20.27.23.jpg"
+  },
+  {
+    id: 4,
+    path: "./assets/facebook_cover_photo_2.png"
   },
 ]
 

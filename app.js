@@ -15,11 +15,11 @@ const createEl = (type, cls = null, textContent = null, parent = null, ...attrs)
 
 const createSlider = () => {
   const slider = createEl('div', 'slider', null, sliderwrapper);
-  const imgSlider = createEl('img', 'img_slider', null, slider, { name: 'src', value: 'https://www.bedandbreakfastroma.com/upload/inkam3/20170508/234-2016-SITO-1.jpg' }, { name: 'alt', value: 'hero image' });
+  const imgSlider = createEl('img', 'img_slider', null, slider, { name: 'src', value: "./assets/facebook_cover_photo_2.png" }, { name: 'alt', value: 'hero image' });
 
   setInterval(() => {
     imgSlider.src = imageList[count].path
-    count === 2 ? count = 0 : count++;
+    count === 3 ? count = 0 : count++;
   }, 3000)
 }
 
