@@ -28,13 +28,13 @@ export const serviceList = [
     id: 2,
     icon: 'fa-solid fa-shower',
     title: 'bagno privato',
-    description: 'bagno deidicato ad ogni camera con doccia ed ogni comfort desiderato'
+    description: 'bagno dedicato ad ogni camera con doccia ed ogni comfort desiderato'
   },
   {
     id: 3,
     icon: 'fa-solid fa-temperature-low',
     title: 'climatizzatore',
-    description: 'ogni camera è dotato di un climatizzatore indipendente in grado di regalarvi la temperatura che desiderate'
+    description: 'ogni camera è dotata di un climatizzatore indipendente in grado di regalarvi la temperatura che desiderate'
   },
   {
     id: 4,
