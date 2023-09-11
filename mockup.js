@@ -38,9 +38,9 @@ export const serviceList = [
   },
   {
     id: 4,
-    icon: 'fa-solid fa-utensils',
-    title: 'colazione',
-    description: 'colazione gratuita al bar sotto daybreak B&B con i nostri buoni, ottimo per gustare piatti tipici della cucina siciliana'
+    icon: 'fa-solid fa-dog',
+    title: 'Cucciolo',
+    description: 'Il Daybreak B&B è orgoglioso di ospitare anche cani di piccola taglia, il vostro cucciolo potrà godersi le bellezze della città insieme a voi.'
   },
   {
     id: 5,
@@ -93,4 +93,73 @@ export const locationList = [
     location: 'porto di palermo',
     description: '15 minuti a piedi al porto di palermo'
   },
+];
+
+export const cardList = [
+  {
+    id: 1,
+    images: [
+      './assets/room1/fronte.jpg',
+      './assets/room1/retro.jpg',
+      './assets/room1/targa.jpg',
+      './assets/room1/bagno.jpg'
+    ],
+    title: "Azalea",
+    type: "Matrimoniale",
+    mq2: "16 mq2",
+    description: "La nostra Azalea é una matrimoniale con balcone vista centro e un bagno privato fuori camera.",
+  },
+  {
+    id: 2,
+    images: [
+      './assets/room2/fronte.jpg',
+      './assets/room2/retro.jpg',
+      './assets/room2/targa.jpg',
+      './assets/room2/bagno.jpg'
+    ],
+    title: "Gelsomino",
+    type: "Quadrupla",
+    mq2: "25 mq2",
+    description: "La nostra Gelsomino é una Quadrupla con stanza extra privata, balcone vista centro e un bagno privato fuori camera.",
+  },
+  {
+    id: 3,
+    images: [
+      './assets/room3/fronte.jpg',
+      './assets/room3/retro.jpg',
+      './assets/room3/targa.jpg',
+      './assets/room3/bagno.jpg'
+    ],
+    title: "Lobelia",
+    type: "Tripla",
+    mq2: "20 mq2",
+    description: "La nostra Lobelia é una tripla con bagno privato in camera.",
+  },
+  {
+    id: 4,
+    images: [
+      './assets/room4/fronte.jpg',
+      './assets/room4/retro.jpg',
+      './assets/room4/targa.jpg',
+      './assets/room4/bagno.jpg'
+    ],
+    title: "Orchidea",
+    type: "Singola",
+    mq2: "14 mq2",
+    description: "La nostra Orchidea é una singola con bagno privato in camera.",
+  },
+  {
+    id: 5,
+    images: [
+      './assets/room5/fronte.jpg',
+      './assets/room5/retro.jpg',
+      './assets/room5/targa.jpg',
+      './assets/room5/bagno.jpg'
+    ],
+    title: "Pomelia",
+    type: "Matrimoniale",
+    mq2: "16 mq2",
+    description: "La nostra Pomelia é una matrimoniale con bagno privato in camera.",
+  },
+
 ];

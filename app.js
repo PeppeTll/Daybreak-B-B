@@ -1,4 +1,4 @@
-import { imageList, serviceList, locationList } from './mockup.js';
+import { imageList, serviceList, locationList, cardList } from './mockup.js';
 
 const qS = el => document.querySelector(el);
 const cE = el => document.createElement(el);
@@ -31,6 +31,40 @@ const createServiceCard = () => {
     const descriptionCard = createEl('p', `card_description`, card.description, cardEl);
   })
 };
+const createRoomCard = () => {
+  cardList.map(room => {
+    const card = createEl('div', 'room_card', null, roomCard);
+    const imageWrap = createEl('figure', 'image_wrap', null, card);
+    const leftArrow = createEl('i', 'fa-solid fa-angle-left left_arrow', null, imageWrap);
+    const rightArrow = createEl('i', 'fa-solid fa-angle-right right_arrow', null, imageWrap);
+    const cardImage = createEl('img', `room_image`, null, imageWrap, { name: 'src', value: room.images[imgIndex] });
+    const infoWrap = createEl('div', 'info_room', null, card);
+    const title = createEl('h2', `title_room`, room.title, infoWrap);
+    const roomType = createEl('p', 'room_type', room.type, infoWrap);
+    const roomMQ2 = createEl('p', 'room_mq2', room.mq2, infoWrap);
+    const description = createEl('p', 'room_description', room.description, infoWrap);
+
+    leftArrow.addEventListener('click', () => {
+      if (imgIndex < 3) {
+        cardImage.src = room.images[imgIndex]
+        imgIndex++;
+      } else {
+        cardImage.src = room.images[imgIndex]
+        imgIndex = 0;
+      }
+    })
+
+    rightArrow.addEventListener('click', () => {
+      if (imgIndex != 0) {
+        cardImage.src = room.images[imgIndex]
+        imgIndex--;
+      } else {
+        cardImage.src = room.images[imgIndex]
+        imgIndex = 3;
+      }
+    })
+  })
+};
 
 const createLocationsCard = () => {
   locationList.map(location => {
@@ -45,13 +79,16 @@ const createLocationsCard = () => {
 
 const sliderwrapper = qS('#slider_root');
 const serviceCard = qS('#card_service');
+const roomCard = qS('#card_room');
 const infoLocation = qS('#info_location');
 const nav = qS('.ul_navbar');
 const burgher = qS('.burgher');
 let count = 0;
+let imgIndex = 0;
 
 createSlider();
 createServiceCard();
+createRoomCard();
 createLocationsCard();
 
 burgher.addEventListener('click', () => {
